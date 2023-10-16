@@ -1,0 +1,12 @@
+@mixin fontStyle($color: $colorText,
+                  $fontFamily: 'regular',
+                  $size: 1rem,
+                  $width: 500,
+                  $lineHeight: 120%) {
+  color: $color;
+  font-family: $fontFamily;
+  font-size: $size;
+  font-style: normal;
+  font-weight: $width;
+  line-height: $lineHeight;
+}

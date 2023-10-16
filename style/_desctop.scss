@@ -1,0 +1,270 @@
+@import "./var";
+@import "./mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 24px;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 36px;
+  border-color: transparent;
+  background: $colorYandex;
+  box-shadow: 0 4px 98px 0 rgba(255, 222, 64, 0.59);
+  @include fontStyle($colorText, medium, 1rem, 500, 91.667%);
+}
+
+.text {
+  @include fontStyle($colorText, medium);
+}
+
+.main {
+  padding: 124.94px calc(50% - $widthSite / 2) 0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.20) 100%),
+  linear-gradient(90deg, rgba(255, 92, 77, 0.22) 0%, rgba(235, 70, 159, 0.22) 25%,
+                  rgba(131, 65, 239, 0.22) 72%, rgba(63, 104, 249, 0.22) 100%);
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    //z-index: 1;
+    background-image: url("/img/scooterMain.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    //width: 1100px;
+  }
+
+  &__logo {
+    margin-bottom: 3rem;
+  }
+
+  &__title {
+    @include fontStyle($colorText, black, 3rem, 900, 100%);
+    leading-trim: both;
+    text-edge: cap;
+    letter-spacing: -1.44px;
+    margin-bottom: 2rem;
+  }
+
+  &__subtitle {
+    position: relative;
+    @include fontStyle($colorText, medium, 1rem, 500, 130%);
+    leading-trim: both;
+    text-edge: cap;
+    margin-bottom: 44px;
+  }
+
+  &__price {
+    position: relative;
+    padding: 4px 12px;
+    @include fontStyle($colorText, medium);
+    leading-trim: both;
+    text-edge: cap;
+    border-radius: 500px;
+    background: radial-gradient(141.42% 141.42% at 100% 0%, #E0B8FF 0%, #B6B9FF 100%);
+
+    &_old {
+      position: absolute;
+      bottom: -2px;
+      right: 113px;
+      padding: 8px 12px 9px 57px;
+      @include fontStyle($colotStrikethroughText, medium, 16px);
+      leading-trim: both;
+      text-edge: cap;
+      border-radius: 500px;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.63) 0%, rgba(255, 255, 255, 0.63) 100%), radial-gradient(141.42% 141.42% at 100% 0%, #E0B8FF 0%, #B6B9FF 100%);
+      //z-index: -1;
+
+      & svg {
+        position: absolute;
+        top: 17px;
+      }
+    }
+  }
+  &__img {
+    display: none;
+  }
+}
+
+.privilege {
+  padding: 128px calc(50% - $widthSite / 2) 0;
+
+  &__title {
+    margin-bottom: 48px;
+    max-width: 649px;
+    @include fontStyle($colorText, black, 56px, 900, 100%);
+    leading-trim: both;
+    text-edge: cap;
+    letter-spacing: -1.12px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 61px;
+    column-gap: 112px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+
+    &__svg {
+      width: 83px;
+      height: 83px;
+    }
+  }
+}
+
+.content {
+  padding: 0 calc(50% - ($widthSite + 10px) / 2) 0;
+
+  &__title {
+    margin-top: 128px;
+    margin-bottom: 48px;
+    @include fontStyle($colorText, black, 2rem, 900, 100%);
+    leading-trim: both;
+    text-edge: cap;
+    letter-spacing: -0.96px;
+  }
+  &__wrapper {
+
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    transform: rotate(2deg);
+    column-gap: 17px;
+  }
+
+  &__text {
+    leading-trim: both;
+    text-edge: cap;
+  }
+
+  &__item {
+    width: 456px;
+    transform: rotate(-2deg);
+
+    &__item img {
+      width: 456px;
+    }
+
+    &:nth-child(2) {
+      margin-top: 15px;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        width: 320px;
+        height: 100%;
+        top: -141px;
+        right: -107px;
+        content: "";
+        background-image: url("/img/cfee0016.png");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &:nth-child(3) {
+      position: relative;
+      margin-top: -227px;
+
+      &::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -149px;
+        left: -251px;
+        content: "";
+        background-image: url("/img/smkt0008.png");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &:nth-child(4) {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 144px;
+        right: -120px;
+        content: "";
+        background-image: url("/img/smkt0010.png");
+        background-repeat: no-repeat;
+      }
+    }
+    &:last-child {
+      margin-top: -227px;
+    }
+  }
+}
+
+.rules {
+  padding: 0 calc(50% - $widthSite / 2) 0;
+  &__wrapper {
+    margin-top: 104.48px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 419px);
+    grid-template-rows:  436px 496px;
+    column-gap: 57px;
+    row-gap: 128px;
+  }
+
+  &__title {
+    @include fontStyle($colorText, black, 2rem, 900, 100%);
+    leading-trim: both;
+    text-edge: cap;
+    letter-spacing: -0.96px;
+  }
+  &__text {
+    leading-trim: both;
+    text-edge: cap;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+
+    &:nth-child(2) img {
+      position: absolute;
+      top: -146px;
+      left: 398px;
+      max-width: 743px;
+    }
+
+    &:nth-child(3) img {
+      position: absolute;
+      top: 463px;
+      left: -223px;
+    }
+  }
+}
+
+.footer {
+  margin: 111px 0 128px;
+  padding: 0 calc(50% - $widthSite / 2) 0;
+
+  &__text {
+    @include fontStyle($colorFooterText, medium, 13px, 400);
+    max-width: 906px;
+
+    &_link {
+      @include fontStyle($colorFooterText, medium, 13px, 400);
+      text-decoration-line: underline;
+    }
+  }
+}

@@ -1,0 +1,216 @@
+@import "./var";
+@import "./mixin";
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+
+  * {
+    font-size: 18px;
+  }
+  .text {
+    @include fontStyle($colorText, medium, 16px);
+  }
+
+  .main {
+    padding: 32px calc(50% - $widthSiteMobile / 2) 0;
+
+    &__left {
+      background-image: none;
+    }
+
+    &__logo {
+      margin-bottom: 1.77rem;
+      width: 6.22rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+      letter-spacing: -0.72px;
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+
+    &__subtitle {
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    &__price {
+      padding: 1px 8px;
+
+      &_old {
+        bottom: 0;
+        right: 88px;
+        padding: 4px 5px 3px 33px;
+        font-size: 13px;
+
+        & svg {
+          top: 11px;
+          width: 37px;
+        }
+      }
+    }
+
+    &__btn {
+      position: fixed;
+      bottom: 15px;
+      width: 311px;
+      z-index: 1;
+    }
+
+    &__img {
+      display: block;
+      position: absolute;
+      top: 297px;
+      left: -53px;
+    }
+  }
+
+  .privilege {
+    margin-top: 351px;
+    padding: 0 calc(50% - $widthSiteMobile / 2) 0;
+
+    &__title {
+      margin-bottom: 54.5px;
+      font-size: 32px;
+      letter-spacing: -0.64px;
+    }
+
+    &__list {
+      row-gap: 24px;
+      column-gap: 0;
+    }
+
+    &__item {
+      flex-direction: row;
+      column-gap: 16px;
+    }
+  }
+
+  .content {
+    padding: 0 calc(50% - ($widthSiteMobile + 104px) / 2) 0;
+
+    &__title {
+      margin-top: 128px;
+      margin-bottom: 48px;
+      font-size: 32px;
+      letter-spacing: -0.64px;
+    }
+
+    //ниже не делал
+    &__wrapper {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      transform: rotate(2deg);
+      column-gap: 17px;
+    }
+
+    &__text {
+      leading-trim: both;
+      text-edge: cap;
+    }
+
+    &__item {
+      width: 456px;
+      transform: rotate(-2deg);
+
+      &__item img {
+        width: 456px;
+      }
+
+      &:nth-child(2) {
+        margin-top: 15px;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          width: 0;
+          height: 0;
+          top: -141px;
+          right: 196px;
+          content: url("/img/cfee0016.png");
+        }
+      }
+
+      &:nth-child(3) {
+        position: relative;
+        margin-top: -227px;
+
+        &::after {
+          position: absolute;
+          width: 0;
+          height: 0;
+          top: -149px;
+          left: -251px;
+          content: url("/img/smkt0008.png");
+        }
+      }
+
+      &:nth-child(4) {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          width: 0;
+          height: 0;
+          bottom: 335px;
+          right: 337px;
+          content: url("/img/smkt0010.png");
+        }
+      }
+
+      &:last-child {
+        margin-top: -227px;
+      }
+    }
+  }
+
+  .rules {
+    padding: 0 calc(50% - $widthSiteMobile / 2) 0;
+
+    &__wrapper {
+      margin-top: 72px;
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+    }
+
+    &__title {
+      font-size: 32px;
+      letter-spacing: -0.64px;
+      width: 311px;
+    }
+
+    &__item {
+      gap: 32px;
+
+      &:nth-child(2) img {
+        display: none;
+      }
+
+      &:nth-child(3) img {
+        position: absolute;
+        top: 277px;
+        left: -21px;
+        width: 360px;
+      }
+    }
+    &__btn {
+      width: 311px;
+    }
+  }
+
+  .footer {
+    margin: 72px 0;
+    padding: 0 calc(50% - $widthSiteMobile / 2) 0;
+
+    &__text {
+      font-size: 10px;
+
+      &_link {
+        font-size: 10px;
+      }
+    }
+  }
+}

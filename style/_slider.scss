@@ -1,0 +1,55 @@
+@import "./var";
+@import "./mixin";
+
+@media screen and (max-width: 1361px) {
+  .swiper {
+
+    &-wrapper {
+      display: flex;
+      column-gap: 0;
+    }
+
+    &-slide {
+      width: 343px;
+    }
+  }
+  .arrow {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+
+    &__prev, &__next {
+      cursor: pointer;
+    }
+  }
+  .content {
+    padding-bottom: 72px;
+
+    &__text {
+      //margin-bottom: 47px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    padding: 0 calc(50% - ($widthSiteMobile + 34px) / 2) 72px;
+
+    &__title {
+      margin: 72px 0 32px;
+      padding: 0 17px;
+      font-size: 32px;
+      letter-spacing: -0.64px;
+    }
+
+    &__text {
+      padding: 0 17px;
+      margin-bottom: 47px;
+    }
+  }
+}
+
+
+
+
